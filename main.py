@@ -15,7 +15,7 @@ def download_file():
     user_path = path_label.cget("text")
     tmsg.showinfo("Downloading...","Downloading in Process")
 
-    mp4_vdo = YouTube(get_link).streams.first().download()
+    mp4_vdo = YouTube(get_link).streams.filter(res="720p).first().download()
     vid_clip = VideoFileClip(mp4_vdo)
     vid_clip.close()
 
